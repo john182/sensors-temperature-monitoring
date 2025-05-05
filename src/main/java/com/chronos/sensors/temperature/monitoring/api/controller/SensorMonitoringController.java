@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.rmi.server.UID;
 import java.util.UUID;
 
 @RestController
@@ -22,7 +21,7 @@ public class SensorMonitoringController {
         SensorMonitoring sensorMonitoring = findByIdOrDefault(sensorId);
 
         return SensorMonitoringresponse.builder()
-                .id(UUID.randomUUID())
+                .id(sensorMonitoring.getId())
                 .enabled(sensorMonitoring.getEnabled())
                 .lastTemperature(sensorMonitoring.getLastTemperature())
                 .updatedAt(sensorMonitoring.getUpdatedAt())
