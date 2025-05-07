@@ -17,3 +17,8 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: 'true'
+  rabbitmq:
+    host: 64.31.26.6
+    port: 5672
+    username: admin
+    password: Chr0n0sD3v
